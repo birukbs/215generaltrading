@@ -3,51 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>215 General Trading LLC | Industrial Food Processing Machinery</title>
+    <title>215 General Trading LLC | Industrial Food Processing Machinery & Consulting</title>
     <style>
         :root {
-            --primary: #0F1E36;
-            --steel: #64748B;
-            --accent: #D97706;
-            --light: #F8FAFC;
-            --dark: #091120;
+            --primary: #1E293B;       /* Carbon Charcoal */
+            --steel: #64748B;         /* Steel Grey */
+            --accent: #0D9488;        /* Electric Mint/Teal */
+            --light-bg: #F1F5F9;      /* Clean Platinum */
+            --white: #FFFFFF;
+            --dark-surface: #0F172A;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: var(--light); color: var(--primary); line-height: 1.6; }
-        header { background-color: var(--primary); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo { color: #fff; font-size: 22px; font-weight: 800; letter-spacing: 0.5px; }
+        body { background-color: var(--light-bg); color: var(--primary); line-height: 1.6; }
+        
+        /* Header & Navigation */
+        header { background-color: var(--primary); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .logo { color: var(--white); font-size: 22px; font-weight: 800; letter-spacing: 0.5px; }
         .logo span { color: var(--accent); }
-        nav a { color: #fff; text-decoration: none; margin-left: 25px; font-weight: 500; font-size: 15px; transition: color 0.3s; }
-        nav a:hover, nav a.active { color: var(--accent); }
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%); color: #fff; padding: 120px 5%; text-align: center; }
-        .hero h1 { font-size: 42px; font-weight: 800; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.2; }
-        .hero p { font-size: 18px; color: #94a3b8; max-width: 650px; margin: 0 auto 30px auto; }
-        .btn { display: inline-block; background-color: var(--accent); color: #fff; padding: 12px 30px; text-decoration: none; font-weight: 700; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; transition: background 0.3s; border: none; cursor: pointer; }
-        .btn:hover { background-color: #b45309; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 60px 5%; }
-        .section-title { text-align: center; font-size: 32px; font-weight: 800; margin-bottom: 40px; position: relative; }
-        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background-color: var(--accent); margin: 10px auto 0 auto; border-radius: 2px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid var(--accent); display: flex; flex-direction: column; }
-        .card-img { width: 100%; height: 200px; object-fit: cover; background-color: #e2e8f0; }
-        .card-content { padding: 25px; flex-grow: 1; }
-        .card h3 { font-size: 20px; margin-bottom: 12px; }
-        .card p { color: #475569; font-size: 15px; }
-        .split { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
-        .split-text { flex: 1; min-width: 300px; }
-        .split-image { flex: 1; min-width: 300px; border-radius: 6px; min-height: 400px; display: flex; position: relative; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        nav a { color: var(--white); text-decoration: none; margin-left: 25px; font-weight: 500; font-size: 15px; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--dark-surface) 100%); color: var(--white); padding: 140px 5%; text-align: center; border-bottom: 5px solid var(--accent); }
+        .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 25px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.15; }
+        .hero p { font-size: 19px; color: #94a3b8; max-width: 750px; margin: 0 auto 35px auto; }
+        
+        /* Buttons */
+        .btn { display: inline-block; background-color: var(--accent); color: var(--white); padding: 14px 35px; text-decoration: none; font-weight: 700; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; border: none; cursor: pointer; }
+        .btn:hover { background-color: #0f766e; transform: translateY(-2px); }
+        
+        /* Global Layout Containers */
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 5%; }
+        .section-title { text-align: center; font-size: 36px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .section-subtitle { text-align: center; color: var(--steel); font-size: 16px; max-width: 600px; margin: 0 auto 50px auto; font-weight: 500; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 5px; background-color: var(--accent); margin: 15px auto 0 auto; border-radius: 2px; }
+        
+        /* Corporate Manifesto Block */
+        .manifesto-box { background-color: var(--white); border-radius: 8px; padding: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 6px solid var(--primary); margin-bottom: 40px; }
+        .manifesto-box h3 { font-size: 24px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--dark-surface); }
+        .manifesto-box p { color: #334155; font-size: 16px; margin-bottom: 15px; text-align: justify; }
+
+        /* Machinery Catalog Grids */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column; border-bottom: 3px solid transparent; transition: all 0.3s; }
+        .card:hover { transform: translateY(-5px); border-bottom-color: var(--accent); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .card-img { width: 100%; height: 240px; object-fit: cover; background-color: #cbd5e1; }
+        .card-content { padding: 30px; flex-grow: 1; }
+        .card h3 { font-size: 22px; margin-bottom: 15px; color: var(--dark-surface); }
+        .card p { color: #475569; font-size: 15px; text-align: justify; }
+        
+        /* Consulting Section Specific Styling */
+        .consulting-bg { background-color: var(--dark-surface); color: var(--white); }
+        .consulting-bg .section-title { color: var(--white); }
+        .consulting-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
+        .consulting-card { background: #1e293b; padding: 30px; border-radius: 6px; border-top: 4px solid var(--accent); }
+        .consulting-card h4 { font-size: 18px; color: var(--white); margin-bottom: 12px; text-transform: uppercase; }
+        .consulting-card p { color: #94a3b8; font-size: 14px; }
+
+        /* Split Screen Presentation (Global Footprint) */
+        .split { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
+        .split-text { flex: 1; min-width: 350px; }
+        .split-image { flex: 1; min-width: 350px; border-radius: 8px; min-height: 450px; display: flex; position: relative; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .split-image img { width: 100%; height: 100%; object-fit: cover; }
-        .tag-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
-        .tag { background: #e2e8f0; color: var(--primary); padding: 5px 12px; font-size: 13px; font-weight: 600; border-radius: 20px; }
-        .tag.destination { background: #fef3c7; color: #92400e; }
-        form { background: #fff; padding: 40px; border-radius: 6px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); max-width: 600px; margin: 0 auto; border-top: 4px solid var(--primary); }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 14px; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 15px; }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
-        footer { background-color: var(--primary); color: #fff; text-align: center; padding: 40px 5%; font-size: 14px; border-top: 3px solid var(--accent); }
-        footer p { color: var(--steel); margin-top: 10px; }
-        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } nav a { margin: 0 10px; } .hero h1 { font-size: 32px; } }
+        
+        /* Logistics Tags */
+        .tag-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .tag { background: #e2e8f0; color: var(--primary); padding: 6px 14px; font-size: 13px; font-weight: 700; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .tag.destination { background: #ccfbf1; color: #115e59; }
+        
+        /* RFQ Form Infrastructure */
+        form { background: var(--white); padding: 50px; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); max-width: 700px; margin: 0 auto; border-top: 4px solid var(--accent); }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-weight: 700; margin-bottom: 10px; font-size: 14px; text-transform: uppercase; color: var(--steel); }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 4px; font-size: 15px; transition: border-color 0.3s; background-color: #f8fafc; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent); background-color: var(--white); }
+        
+        /* Footer */
+        footer { background-color: var(--dark-surface); color: var(--white); text-align: center; padding: 50px 5%; font-size: 14px; border-top: 4px solid var(--accent); }
+        footer p { color: var(--steel); margin-top: 12px; }
+        
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } nav a { margin: 0 12px; } .hero h1 { font-size: 34px; } .manifesto-box, form { padding: 30px; } }
     </style>
 </head>
 <body>
@@ -56,121 +92,165 @@
         <div class="logo">215 <span>GENERAL TRADING</span></div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#machinery">Machinery</a>
-            <a href="#footprint">Global Footprint</a>
+            <a href="#about">Corporate Profile</a>
+            <a href="#machinery">Machinery Lines</a>
+            <a href="#consulting">Consulting</a>
+            <a href="#footprint">Logistics Network</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <h1>Industrial Food Processing Machinery Built for Global Markets</h1>
-        <p>Sourcing high-capacity manufacturing lines from the US, Germany, Turkey, and China to power production across Africa and Asia.</p>
-        <a href="#contact" class="btn">Request Technical Quotation</a>
+        <h1>High-Capacity Food Processing Hardware & System Infrastructure</h1>
+        <p>Sourcing precision engineering components from the US, Germany, Turkey, and China. Engineering turnkey manufacturing pipelines for deployment across United States, African, and Middle Eastern markets.</p>
+        <a href="#contact" class="btn">Initiate Technical Consultation</a>
     </section>
 
-    <div id="machinery" class="container">
-        <h2 class="section-title">Specialized Production Lines</h2>
+    <div id="about" class="container">
+        <div class="manifesto-box">
+            <h3>Corporate Mandate & Vision</h3>
+            <p>215 General Trading LLC operates as an elite intermediary in industrial agro-processing asset deployment. We serve high-velocity production environments by linking advanced western and eastern engineering hubs directly to high-growth manufacturing zones across the United States, Africa, and the Middle East.</p>
+            <p>Our core operational competency centers on bridging complex supply chain deficits. We specialize exclusively in configuring, sourcing, and delivering heavy manufacturing machinery optimized for small-to-medium artisanal production setups up to mid-market multi-ton processing plants. We maintain rigorous design paradigms to ensure that every machinery asset we procure minimizes raw material waste, secures strict processing hygiene, and delivers exceptional uptime in demanding operational environments.</p>
+        </div>
+    </div>
+
+    <div id="machinery" class="container" style="padding-top: 0;">
+        <h2 class="section-title">Industrial Production Systems</h2>
+        <p class="section-subtitle">Heavy hardware assets engineered for mid-market installations and optimized for maximum yield extraction.</p>
+        
         <div class="grid">
             <div class="card">
                 <img class="card-img" src="arno-senoner-8V56CnwVJRE-unsplash.jpg" alt="Flour & Grain Milling">
                 <div class="card-content">
-                    <h3>Flour & Grain Milling</h3>
-                    <p>High-output commercial milling systems designed for optimal extraction rates, durability, and automated grain handling.</p>
+                    <h3>Flour & Grain Milling Hardware</h3>
+                    <p>High-output commercial pneumatic milling setups and screening complexes. Systems are calibrated for optimal extraction rates, grain tempering control, and heavy-duty continuous material routing.</p>
                 </div>
             </div>
             <div class="card">
                 <img class="card-img" src="tecnic-bioprocess-solutions-UWU_i03dNq4-unsplash.jpg" alt="Dairy Processing">
                 <div class="card-content">
                     <h3>Dairy Processing Supplies</h3>
-                    <p>Turnkey pasteurizers, homogenizers, storage tanks, and high-speed bottling lines complying with international sanitary standards.</p>
+                    <p>Modular turnkey pasteurization units, homogenizers, sanitization arrays, and high-speed automated filling and bottling lines engineered under strict international sanitary protocols.</p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img" src="tecnic-bioprocess-solutions-YvQJI4M513c-unsplash.jpg" alt="Condiment & Sauce Production">
+                <img class="card-img" src="tecnic-bioprocess-solutions-YvQJI4M513c-unsplash.jpg" alt="Condiment Production">
                 <div class="card-content">
-                    <h3>Condiment & Sauce Production</h3>
-                    <p>Precision mixing, cooking, and automated filling lines optimized for high-viscosity products like Ketchup and Mustard.</p>
+                    <h3>Condiment & Sauce Processing</h3>
+                    <p>High-viscosity vacuum-cooking systems, automated batching mixing equipment, and precise continuous filling systems designed specifically to handle complex condiment formulas including Ketchup and Mustard.</p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img" src="crystal-kwok-mhUsz2ezIXQ-unsplash.jpg" alt="Beverage & Juicing">
+                <img class="card-img" src="crystal-kwok-mhUsz2ezIXQ-unsplash.jpg" alt="Beverage Extraction">
                 <div class="card-content">
-                    <h3>Beverage & Juicing</h3>
-                    <p>Commercial extraction, fine filtration, and aseptic packaging systems built to preserve freshness and shelf life.</p>
+                    <h3>Beverage & Industrial Juicing</h3>
+                    <p>High-capacity cold extraction units, centrifugal clarifiers, sterile fine filtration systems, and aseptic cold-fill packaging arrays engineered to maintain shelf-life stability without nutrient degradation.</p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img" src="tormius-ISmRgkuPfcM-unsplash.jpg" alt="Edible Oil Refining">
+                <img class="card-img" src="tormius-ISmRgkuPfcM-unsplash.jpg" alt="Edible Oil Presses">
                 <div class="card-content">
-                    <h3>Edible Oil Refining</h3>
-                    <p>Advanced mechanical pressing and refining hardware tailored for Sunflower oil, Avocado oil, and vegetable oil extraction.</p>
+                    <h3>Edible Oil Pressing & Refining</h3>
+                    <p>High-pressure mechanical screw expellers and filtration hardware optimized for cold and hot processing of delicate seeds and crops, with custom setups for Sunflower, Avocado, and specialized vegetable oils.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="footprint" style="background-color: #fff;">
+    <section id="consulting" class="consulting-bg">
+        <div class="container">
+            <h2 class="section-title">Industrial Advisory & Consulting</h2>
+            <p class="section-subtitle" style="color: #94a3b8;">Technical integration services assisting processors from initial schematic designs to live plant production deployment.</p>
+            
+            <div class="consulting-grid">
+                <div class="consulting-card">
+                    <h4>Factory Floor Layout Optimization</h4>
+                    <p>Engineered workflow modeling to minimize biological cross-contamination risks, manage operational foot traffic, and optimize physical machinery footprints for lean handling workflows.</p>
+                </div>
+                <div class="consulting-card">
+                    <h4>Capacity Scaling Analysis</h4>
+                    <p>Data-driven machinery specification mapping matching output profiles exactly to current capital allocations and target market processing quotas, eliminating processing bottlenecks.</p>
+                </div>
+                <div class="consulting-card">
+                    <h4>Sanitary Compliance & HACCP</h4>
+                    <p>Pre-audit engineering protocols ensuring physical components, structural pipe loops, and food-contact metals meet strict global hygienic and food safety standards.</p>
+                </div>
+                <div class="consulting-card">
+                    <h4>Global Component Sourcing</h4>
+                    <p>Procurement network mapping to secure critical mechanical parts, custom dies, structural replacement seals, and long-lead components directly from specialized manufacturers.</p>
+                </div>
+                <div class="consulting-card">
+                    <h4>Automated Software Pipelines</h4>
+                    <p>Integration of telemetry interfaces, logic-controller configurations, and data reporting instrumentation tracking flow metrics, thermal holding values, and real-time machine performance diagnostics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footprint" style="background-color: var(--white);">
         <div class="container split">
             <div class="split-text">
-                <h2 class="section-title" style="text-align: left; margin-bottom: 25px;">Global Sourcing & Supply Network</h2>
-                <p style="margin-bottom: 20px; color: #475569;">We bridge the gap between premium global engineering hubs and rapidly growing processing facilities in emerging markets.</p>
+                <h2 class="section-title" style="text-align: left; margin-bottom: 25px;">Global Supply Matrix</h2>
+                <p style="margin-bottom: 25px; color: #475569;">Our engineering specialists manage international procurement routing networks to cross-examine quality build tolerances, orchestrating heavy-freight logistics straight to client deployment coordinates.</p>
                 
-                <h4 style="margin-bottom: 8px;">Precision Sourcing Hubs:</h4>
-                <div class="tag-container" style="margin-bottom: 25px;">
+                <h4 style="margin-bottom: 10px; text-transform: uppercase; font-size: 14px; color: var(--steel);">Precision Sourcing Hubs:</h4>
+                <div class="tag-container" style="margin-bottom: 35px;">
                     <div class="tag">United States</div>
                     <div class="tag">Germany</div>
                     <div class="tag">Turkey</div>
                     <div class="tag">China</div>
                 </div>
 
-                <h4 style="margin-bottom: 8px;">Proven Delivery Markets:</h4>
+                <h4 style="margin-bottom: 10px; text-transform: uppercase; font-size: 14px; color: var(--steel);">Active Regional Delivery Corridors:</h4>
                 <div class="tag-container">
-                    <div class="tag destination">Sierra Leone</div>
-                    <div class="tag destination">Cameroon</div>
-                    <div class="tag destination">Uganda</div>
-                    <div class="tag destination">Kenya</div>
-                    <div class="tag destination">Indonesia</div>
-                    <div class="tag destination">Bangladesh</div>
+                    <div class="tag destination">United States Markets</div>
+                    <div class="tag destination">African Nations</div>
+                    <div class="tag destination">Middle Eastern Markets</div>
+                    <div class="tag destination">Southeast Asian Hubs</div>
                 </div>
             </div>
             <div class="split-image">
-                <img src="arno-senoner-oLS6IxeeVNs-unsplash.jpg" alt="Global Logistics and Factory Infrastructure">
+                <img src="arno-senoner-oLS6IxeeVNs-unsplash.jpg" alt="Global Supply Logistics Network">
             </div>
         </div>
     </div>
 
     <div id="contact" class="container">
-        <h2 class="section-title">Request Specifications & Procurement</h2>
+        <h2 class="section-title">Procurement & System Intake</h2>
+        <p class="section-subtitle">Submit your exact engineering parameters below. Our engineering desk will review technical requirements and compile asset specification proposals.</p>
+        
         <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
             <div class="form-group">
-                <label>Company Name</label>
+                <label>Corporate Legal Entity Name</label>
                 <input type="text" name="company" required>
             </div>
             <div class="form-group">
-                <label>Target Machinery Type</label>
+                <label>Intended Production Target</label>
                 <select name="machinery_type" required>
-                    <option value="flour">Flour & Grain Milling</option>
-                    <option value="dairy">Dairy Supplies</option>
-                    <option value="condiment">Condiments (Ketchup/Mustard)</option>
-                    <option value="juicing">Beverage & Juicing</option>
-                    <option value="oil">Edible Oil (Sunflower/Avocado)</option>
+                    <option value="flour">Flour & Grain Processing Systems</option>
+                    <option value="dairy">Dairy Sanitation & Packaging Lines</option>
+                    <option value="condiment">High-Viscosity Condiment Processing</option>
+                    <option value="juicing">Aseptic Beverage & Juicing Extraction</option>
+                    <option value="oil">Mechanical Edible Oil Pressing Systems</option>
+                    <option value="consulting">Industrial Advisory / Engineering Consultation</option>
                 </select>
             </div>
             <div class="form-group">
-                <label>Destination Country</label>
-                <input type="text" name="destination" required>
+                <label>Installation Country / Logistics Destination</label>
+                <input type="text" name="destination" placeholder="e.g., United States, UAE, Kenya" required>
             </div>
             <div class="form-group">
-                <label>Detailed Technical Requirements</label>
-                <textarea name="requirements" rows="5" required></textarea>
+                <label>Project Scale & Required Production Capacities</label>
+                <textarea name="requirements" rows="6" placeholder="Detail baseline expectations, estimated material volumes per hour, and factory automation preferences..." required></textarea>
             </div>
-            <button type="submit" class="btn" style="width: 100%;">Submit RFQ</button>
+            <button type="submit" class="btn" style="width: 100%;">Submit Formal Request for Quote</button>
         </form>
     </div>
 
     <footer>
+        <div class="logo" style="margin-bottom: 15px;">215 <span>GENERAL TRADING</span></div>
         <p>&copy; 2026 215 General Trading LLC. All Rights Reserved.</p>
-        <p>Industrial Supply Chains Engineered for Performance.</p>
+        <p>Industrial Supply Chains Engineered for Absolute Operational Performance.</p>
     </footer>
 
 </body>
